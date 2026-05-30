@@ -4,13 +4,13 @@
 ------------------------------------------------------------------- */
 
 :root {
-  --bg:           #faf6ef;          /* warm cream */
+  --bg:           #faf6ef;
   --bg-deep:      #f1e9d8;
   --paper:        #ffffff;
   --ink:          #2a2018;
   --ink-soft:     #4b3c2f;
   --muted:        #877766;
-  --accent:       #b4541d;          /* warm rust / pumpkin */
+  --accent:       #b4541d;
   --accent-dark:  #8a3e12;
   --olive:        #6a7838;
   --gold:         #d4a64a;
@@ -70,7 +70,7 @@ p { margin: 0 0 1em; }
 .section-head h2 { margin-bottom: 0; }
 .muted { color: var(--muted); }
 
-/* ---------------- BUTTONS ---------------- */
+/* BUTTONS */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -92,7 +92,7 @@ p { margin: 0 0 1em; }
 .btn-ghost:hover { background: var(--ink); color: var(--paper); }
 .btn-reserve { padding: 10px 18px; font-size: .88rem; }
 
-/* ---------------- HEADER ---------------- */
+/* HEADER */
 .site-header {
   position: sticky;
   top: 0;
@@ -112,11 +112,7 @@ p { margin: 0 0 1em; }
   padding-top: 16px;
   padding-bottom: 16px;
 }
-.brand {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
-}
+.brand { display: inline-flex; align-items: baseline; gap: 8px; }
 .brand-name {
   font-family: 'Bitter', serif;
   font-size: 1.5rem;
@@ -183,7 +179,7 @@ p { margin: 0 0 1em; }
   transition: transform .3s, opacity .3s;
 }
 
-/* ---------------- HERO ---------------- */
+/* HERO */
 .hero {
   position: relative;
   min-height: 78vh;
@@ -194,13 +190,13 @@ p { margin: 0 0 1em; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1599921841143-819065280020?auto=format&fit=crop&w=1920&q=80');
+  background-image: url('https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=1920&q=85');
   background-size: cover;
   background-position: center;
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(20,12,8,0.35) 0%, rgba(20,12,8,0.78) 100%);
+  background: linear-gradient(110deg, rgba(20,12,8,0.78) 0%, rgba(20,12,8,0.55) 55%, rgba(20,12,8,0.2) 100%);
 }
 .hero-inner { position: relative; padding: 110px 24px 90px; }
 .hero .eyebrow {
@@ -236,15 +232,17 @@ p { margin: 0 0 1em; }
 .hero-cta .btn-ghost:hover { background: #fff; color: var(--ink); }
 .hero-meta {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: .95rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  font-size: .92rem;
   color: rgba(255,255,255,.88);
   font-variant-numeric: tabular-nums;
 }
-.hero-meta .rating { color: #ffd9a8; font-weight: 600; margin-top: 6px; }
+.hero-meta .dot { color: rgba(255,255,255,.4); }
+.hero-meta .rating { color: #ffd9a8; font-weight: 600; }
 
-/* ---------------- STORY ---------------- */
+/* STORY */
 .story { padding: 90px 0; background: var(--bg); }
 .story-grid {
   display: grid;
@@ -278,7 +276,7 @@ p { margin: 0 0 1em; }
 }
 .story-stats span { color: var(--muted); font-size: .92rem; }
 
-/* ---------------- GALLERY ---------------- */
+/* GALLERY */
 .gallery { padding: 90px 0; background: var(--bg); }
 .gallery-grid {
   display: grid;
@@ -303,7 +301,7 @@ p { margin: 0 0 1em; }
 }
 .gallery-item:hover img { transform: scale(1.04); }
 
-/* ---------------- EMPFEHLUNGEN ---------------- */
+/* EMPFEHLUNGEN */
 .menu { padding: 90px 0; background: var(--paper); }
 
 .rec-grid {
@@ -339,7 +337,7 @@ p { margin: 0 0 1em; }
   font-style: italic;
 }
 
-/* ---------------- KUCHEN ---------------- */
+/* KUCHEN */
 .cakes { padding: 90px 0; background: var(--bg-deep); }
 .menu-panels {
   display: grid;
@@ -372,7 +370,7 @@ p { margin: 0 0 1em; }
 }
 .menu-item-desc { font-size: .92rem; color: var(--muted); margin: 0; }
 
-/* ---------------- VISIT ---------------- */
+/* VISIT */
 .visit { padding: 90px 0; background: var(--paper); }
 .visit-grid {
   display: grid;
@@ -408,7 +406,7 @@ p { margin: 0 0 1em; }
 }
 .visit-map iframe { width: 100%; height: 100%; border: 0; display: block; }
 
-/* ---------------- FOOTER ---------------- */
+/* FOOTER */
 .site-footer {
   background: var(--ink);
   color: rgba(255,255,255,.78);
@@ -452,7 +450,7 @@ p { margin: 0 0 1em; }
   color: rgba(255,255,255,.4);
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .nav-main { display: none; }
   .btn-reserve { display: none; }
@@ -488,9 +486,10 @@ p { margin: 0 0 1em; }
   .brand-sub { display: none; }
   .header-inner { gap: 12px; }
   .footer-cols { grid-template-columns: 1fr; }
+  .hero-meta { font-size: .85rem; }
 }
 
-/* ---------------- MOBILE NAV ---------------- */
+/* MOBILE NAV */
 .mobile-nav {
   position: fixed;
   inset: 0;
