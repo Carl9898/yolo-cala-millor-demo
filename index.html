@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YOLO Cala Millor · Deutsche Küche · Cala Millor</title>
+<meta name="description" content="Frisch gekochte deutsche Küche in Cala Millor. Schnitzel, Currywurst, Wok und hausgemachte Kuchen. C/ de Ca s'Hereu 15. Mi–So ab 17:30." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="YOLO Cala Millor">
+      <span class="brand-name">YOLO</span>
+      <span class="brand-sub">Cala Millor</span>
+    </a>
+
+    <nav class="nav-main" aria-label="Main navigation">
+      <a href="#empfehlungen" data-i18n="nav.menu">Empfehlungen</a>
+      <a href="#kuchen" data-i18n="nav.cakes">Kuchen</a>
+      <a href="#historia" data-i18n="nav.story">Über uns</a>
+      <a href="#visitanos" data-i18n="nav.visit">Besuch</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="lang-switch" role="group" aria-label="Sprache">
+        <button data-lang="de" class="lang-btn is-active">DE</button>
+        <button data-lang="en" class="lang-btn">EN</button>
+        <button data-lang="es" class="lang-btn">ES</button>
+      </div>
+      <a href="tel:+34643820006" class="btn btn-primary btn-reserve" data-i18n="cta.reserve">Reservieren</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="eyebrow" data-i18n="hero.eyebrow">Cala Millor · Mallorca</p>
+    <h1 class="hero-title" data-i18n="hero.title">Frisch gekocht.<br/>Mit viel Liebe.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Deutsche Küche in einer kleinen Seitenstraße von Cala Millor — gemütlich, ehrlich, jeden Abend frisch zubereitet.</p>
+    <div class="hero-cta">
+      <a href="tel:+34643820006" class="btn btn-primary" data-i18n="hero.reserve">Tisch reservieren</a>
+      <a href="https://wa.me/34643820006" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div class="hero-meta">
+      <span data-i18n="hero.hours">Mi – So · 17:30 – 22:30</span>
+      <span class="dot">·</span>
+      <span data-i18n="hero.rating">★ 4,9 bei Google · 433 Bewertungen</span>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="historia">
+  <div class="container story-grid">
+    <div class="story-text">
+      <p class="kicker" data-i18n="story.kicker">Über uns</p>
+      <h2 data-i18n="story.title">Klein, gemütlich, ehrlich gekocht.</h2>
+      <p data-i18n="story.p1">Das YOLO liegt etwas abseits vom Geschehen, in einer kleinen Seitenstraße Richtung Strandpromenade. Innen rustikale weiße Tische, eine Bruchsteinwand, eine kleine Theke. Draußen komplett überdachte Terrasse.</p>
+      <p data-i18n="story.p2">Wir kochen frisch und mit viel Liebe — Schnitzel, Currywurst hausgemacht, vegetarischer Wok, Tapas und wechselnde Tagesgerichte. Dazu Kuchen aus eigener Backstube. Für Gäste, die etwas Vertrautes wollen.</p>
+    </div>
+    <ul class="story-stats">
+      <li><strong>4,9 ★</strong><span data-i18n="story.statRating">433 Google-Bewertungen</span></li>
+      <li><strong>5,0 ★</strong><span data-i18n="story.statFb">83 Facebook-Bewertungen</span></li>
+      <li><strong>10–20€</strong><span data-i18n="story.statPrice">pro Person</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- EMPFEHLUNGEN -->
+<section class="menu" id="empfehlungen">
+  <div class="container">
+    <header class="section-head">
+      <p class="kicker" data-i18n="menu.kicker">Empfehlungen</p>
+      <h2 data-i18n="menu.title">Was unsere Gäste lieben.</h2>
+    </header>
+
+    <div class="rec-grid" id="recGrid"></div>
+
+    <p class="menu-note" data-i18n="menu.note">Wechselnde Tagesgerichte werden zu Wochenbeginn auf unserer Facebook-Seite angekündigt. Die komplette Karte gibt es vor Ort.</p>
+  </div>
+</section>
+
+<!-- KUCHEN -->
+<section class="cakes" id="kuchen">
+  <div class="container">
+    <header class="section-head">
+      <p class="kicker" data-i18n="cakes.kicker">Kuchen &amp; Süßes</p>
+      <h2 data-i18n="cakes.title">Backen ist aus Teig geformte Liebe.</h2>
+    </header>
+
+    <div class="menu-panels" id="cakePanels"></div>
+
+    <p class="menu-note" data-i18n="cakes.extra">Zusätzlich mit einer Kugel Vanilleeis +2,00 €</p>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visitanos">
+  <div class="container visit-grid">
+    <div class="visit-info">
+      <p class="kicker" data-i18n="visit.kicker">Besuch</p>
+      <h2 data-i18n="visit.title">C/ de Ca s'Hereu, 15 — Cala Millor</h2>
+
+      <div class="info-block">
+        <p class="info-label" data-i18n="visit.hoursLabel">Öffnungszeiten</p>
+        <p><span data-i18n="visit.hoursDays">Mittwoch bis Sonntag</span> · 17:30 – 22:30</p>
+        <p class="muted"><span data-i18n="visit.hoursClosed">Montag &amp; Dienstag geschlossen</span></p>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label" data-i18n="visit.addressLabel">Adresse</p>
+        <p>C/ de Ca s'Hereu, 15<br/>07560 Cala Millor · Mallorca</p>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label" data-i18n="visit.contactLabel">Kontakt</p>
+        <p><a href="tel:+34643820006">+34 643 82 00 06</a></p>
+        <p><a href="mailto:yolo.mallorca@yahoo.com">yolo.mallorca@yahoo.com</a></p>
+      </div>
+
+      <div class="visit-cta">
+        <a href="tel:+34643820006" class="btn btn-primary" data-i18n="visit.callCta">Anrufen zum Reservieren</a>
+        <a href="https://wa.me/34643820006" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/yolo_in_cala_millor/" class="btn btn-ghost" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+
+    <div class="visit-map">
+      <iframe
+        src="https://www.google.com/maps?q=YOLO+Cala+Millor,+Carrer+de+Ca+s'Hereu+15,+Cala+Millor&z=16&output=embed"
+        title="YOLO Cala Millor — C/ de Ca s'Hereu 15"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name">YOLO <em>Cala Millor</em></p>
+      <p class="footer-tag" data-i18n="footer.tag">Frisch gekocht, mit viel Liebe.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <p class="footer-label" data-i18n="footer.findUs">Wo wir sind</p>
+        <p>C/ de Ca s'Hereu, 15<br/>07560 Cala Millor</p>
+      </div>
+      <div>
+        <p class="footer-label" data-i18n="footer.hours">Öffnungszeiten</p>
+        <p data-i18n="footer.hoursLine">Mi – So · 17:30 – 22:30</p>
+        <p class="muted" data-i18n="footer.closed">Mo &amp; Di geschlossen</p>
+      </div>
+      <div>
+        <p class="footer-label" data-i18n="footer.contact">Kontakt</p>
+        <p><a href="tel:+34643820006">+34 643 82 00 06</a></p>
+        <p><a href="https://www.facebook.com/people/YOLO/100063573311151/" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> YOLO · Cala Millor</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
