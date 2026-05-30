@@ -1,11 +1,5 @@
-/* ------------------------------------------------------------------
-   YOLO — Cala Millor
-   Data verified from Facebook, Instagram, Google Maps reviews,
-   Cala Millor Guru article, and OCR of own menu photo (Kuchenkarte).
-   No invented prices.
-------------------------------------------------------------------- */
+/* YOLO — Cala Millor */
 
-// ---------- EMPFEHLUNGEN (Items aus Reviews + Insta-Highlights, OHNE Preise) ----------
 const RECS = [
   { de:{n:"Schnitzel mit Bratkartoffeln", d:"Unser Klassiker. Würden die meisten Wirtshäuser in Deutschland nicht besser hinbekommen."}, en:{n:"Schnitzel with Bratkartoffeln", d:"Our classic. Even most pubs in Germany couldn't do it better."}, es:{n:"Schnitzel con patatas salteadas", d:"Nuestro clásico. La mayoría de tabernas alemanas no lo harían mejor."} },
   { de:{n:"Currywurst mit hausgemachter Soße", d:"Klassisch. Soße kommt aus unserer Küche."}, en:{n:"Currywurst with house sauce", d:"Classic. Sauce made in-house."}, es:{n:"Currywurst con salsa casera", d:"Clásico. La salsa la hacemos nosotros."} },
@@ -15,7 +9,6 @@ const RECS = [
   { de:{n:"Saisonale Spezialitäten", d:"Pfifferlinge, Spargel und mehr — je nach Saison. Aktuelles auf unserem Facebook."}, en:{n:"Seasonal specials", d:"Chanterelles, asparagus and more. See our Facebook for current dishes."}, es:{n:"Especialidades de temporada", d:"Setas, espárragos y más. Mira nuestro Facebook para lo actual."} }
 ];
 
-// ---------- KUCHENKARTE (aus OCR der eigenen Karte, mit echten Preisen) ----------
 const CAKES = [
   { de:{n:"Apfeltarte mit Sahne",d:"Apfel hat Vitamine :-)"}, en:{n:"Apple tart with cream",d:"Apple has vitamins :-)"}, es:{n:"Tarta de manzana con nata",d:"La manzana tiene vitaminas :-)"}, p:"7,90 €" },
   { de:{n:"Schokobombe mit Sahne",d:"Schokoküchlein mit flüssigem Kern"}, en:{n:"Chocolate bomb with cream",d:"Chocolate cake with liquid core"}, es:{n:"Bomba de chocolate con nata",d:"Bizcochito con corazón líquido"}, p:"4,90 €" },
@@ -27,7 +20,6 @@ const CAKES = [
   { de:{n:"Knuspriges Joghurt-Erdbeer-Törtchen mit Sahne",d:"Keksboden in weißer Schokolade, Joghurtmousse, Erdbeermarmelade, mit Pistazienspänen dekoriert"}, en:{n:"Crunchy yoghurt-strawberry tartlet with cream",d:"Cookie base in white chocolate, yoghurt mousse, strawberry jam, pistachio shavings"}, es:{n:"Tartaleta crujiente yogur-fresa con nata",d:"Base de galleta con chocolate blanco, mousse de yogur, mermelada de fresa y pistacho"}, p:"8,90 €" }
 ];
 
-// ---------- I18N ----------
 const I18N = {
   de: {
     "nav.menu":"Empfehlungen","nav.cakes":"Kuchen","nav.gallery":"Eindrücke","nav.story":"Über uns","nav.visit":"Besuch",
@@ -36,9 +28,8 @@ const I18N = {
     "hero.title":"Frisch gekocht. Mit viel Liebe.",
     "hero.sub":"Deutsche Küche in einer kleinen Seitenstraße von Cala Millor — gemütlich, ehrlich, jeden Abend frisch zubereitet.",
     "hero.reserve":"Tisch reservieren",
-    "hero.hoursMain":"Mi – Sa · 17:30 – 22:30",
-    "hero.hoursSunday":"So · 12:00 – 14:30 · 17:30 – 22:30",
-    "hero.rating":"★ 4,9 bei Google · 433 Bewertungen",
+    "hero.hours":"Mi – Sa · 17:30 – 22:30  ·  So · 12:00 – 14:30 & 17:30 – 22:30",
+    "hero.rating":"★ 4,9 · 433 Bewertungen",
     "gallery.kicker":"Eindrücke",
     "gallery.title":"Wie es bei uns aussieht.",
     "gallery.note":"Symbolbilder – auf Anfrage tauschen wir gegen echte Fotos eurer Gerichte.",
@@ -79,9 +70,8 @@ const I18N = {
     "hero.title":"Freshly cooked. With lots of love.",
     "hero.sub":"German cooking in a small side street of Cala Millor — cozy, honest, freshly prepared every evening.",
     "hero.reserve":"Book a table",
-    "hero.hoursMain":"Wed – Sat · 17:30 – 22:30",
-    "hero.hoursSunday":"Sun · 12:00 – 14:30 · 17:30 – 22:30",
-    "hero.rating":"★ 4.9 on Google · 433 reviews",
+    "hero.hours":"Wed – Sat · 17:30 – 22:30  ·  Sun · 12:00 – 14:30 & 17:30 – 22:30",
+    "hero.rating":"★ 4.9 · 433 reviews",
     "gallery.kicker":"Impressions",
     "gallery.title":"What it looks like inside.",
     "gallery.note":"Sample photos — happy to swap for real photos of your dishes on request.",
@@ -122,9 +112,8 @@ const I18N = {
     "hero.title":"Cocinado al momento. Con mucho cariño.",
     "hero.sub":"Cocina alemana en una pequeña calle de Cala Millor — acogedor, honesto, recién preparado cada tarde.",
     "hero.reserve":"Reservar mesa",
-    "hero.hoursMain":"Mié – Sáb · 17:30 – 22:30",
-    "hero.hoursSunday":"Dom · 12:00 – 14:30 · 17:30 – 22:30",
-    "hero.rating":"★ 4,9 en Google · 433 reseñas",
+    "hero.hours":"Mié – Sáb · 17:30 – 22:30  ·  Dom · 12:00 – 14:30 y 17:30 – 22:30",
+    "hero.rating":"★ 4,9 · 433 reseñas",
     "gallery.kicker":"Imágenes",
     "gallery.title":"Así somos por dentro.",
     "gallery.note":"Imágenes de muestra — las cambiamos por fotos reales de vuestros platos a petición.",
@@ -160,10 +149,8 @@ const I18N = {
   }
 };
 
-// ---------- STATE ----------
 let currentLang = 'de';
 
-// ---------- I18N ----------
 function applyI18n(lang){
   currentLang = lang;
   document.documentElement.setAttribute('lang', lang);
@@ -179,7 +166,6 @@ function applyI18n(lang){
   renderCakes();
 }
 
-// ---------- RENDERERS ----------
 function renderRecs(){
   const grid = document.getElementById('recGrid');
   if (!grid) return;
@@ -194,18 +180,10 @@ function renderCakes(){
   if (!panel) return;
   panel.innerHTML = CAKES.map(it => {
     const t = it[currentLang] || it.de;
-    return `
-      <div class="menu-item">
-        <div class="menu-item-head">
-          <span class="menu-item-name">${t.n}</span>
-          <span class="menu-item-price">${it.p}</span>
-        </div>
-        ${t.d ? `<p class="menu-item-desc">${t.d}</p>` : ''}
-      </div>`;
+    return `<div class="menu-item"><div class="menu-item-head"><span class="menu-item-name">${t.n}</span><span class="menu-item-price">${it.p}</span></div>${t.d ? `<p class="menu-item-desc">${t.d}</p>` : ''}</div>`;
   }).join('');
 }
 
-// ---------- INIT ----------
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.lang-btn').forEach(b => {
     b.addEventListener('click', () => applyI18n(b.dataset.lang));
@@ -213,14 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nav = document.createElement('nav');
   nav.className = 'mobile-nav';
-  nav.innerHTML = `
-    <a href="#empfehlungen" data-i18n="nav.menu">Empfehlungen</a>
-    <a href="#kuchen" data-i18n="nav.cakes">Kuchen</a>
-    <a href="#eindruecke" data-i18n="nav.gallery">Eindrücke</a>
-    <a href="#historia" data-i18n="nav.story">Über uns</a>
-    <a href="#visitanos" data-i18n="nav.visit">Besuch</a>
-    <a href="tel:+34643820006" class="btn btn-primary" data-i18n="cta.reserve">Reservieren</a>
-  `;
+  nav.innerHTML = `<a href="#empfehlungen" data-i18n="nav.menu">Empfehlungen</a><a href="#kuchen" data-i18n="nav.cakes">Kuchen</a><a href="#eindruecke" data-i18n="nav.gallery">Eindrücke</a><a href="#historia" data-i18n="nav.story">Über uns</a><a href="#visitanos" data-i18n="nav.visit">Besuch</a><a href="tel:+34643820006" class="btn btn-primary" data-i18n="cta.reserve">Reservieren</a>`;
   document.body.appendChild(nav);
   const toggle = document.getElementById('navToggle');
   toggle.addEventListener('click', () => {
