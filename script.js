@@ -30,14 +30,18 @@ const CAKES = [
 // ---------- I18N ----------
 const I18N = {
   de: {
-    "nav.menu":"Empfehlungen","nav.cakes":"Kuchen","nav.story":"Über uns","nav.visit":"Besuch",
+    "nav.menu":"Empfehlungen","nav.cakes":"Kuchen","nav.gallery":"Eindrücke","nav.story":"Über uns","nav.visit":"Besuch",
     "cta.reserve":"Reservieren",
     "hero.eyebrow":"Cala Millor · Mallorca",
     "hero.title":"Frisch gekocht. Mit viel Liebe.",
     "hero.sub":"Deutsche Küche in einer kleinen Seitenstraße von Cala Millor — gemütlich, ehrlich, jeden Abend frisch zubereitet.",
     "hero.reserve":"Tisch reservieren",
-    "hero.hours":"Mi – So · ab 17:30 · So auch Mittag",
+    "hero.hoursMain":"Mi – Sa · 17:30 – 22:30",
+    "hero.hoursSunday":"So · 12:00 – 14:30 · 17:30 – 22:30",
     "hero.rating":"★ 4,9 bei Google · 433 Bewertungen",
+    "gallery.kicker":"Eindrücke",
+    "gallery.title":"Wie es bei uns aussieht.",
+    "gallery.note":"Symbolbilder – auf Anfrage tauschen wir gegen echte Fotos eurer Gerichte.",
     "story.kicker":"Über uns",
     "story.title":"Klein, gemütlich, ehrlich gekocht.",
     "story.p1":"Das YOLO liegt etwas abseits vom Geschehen, in einer kleinen Seitenstraße Richtung Strandpromenade. Innen rustikale weiße Tische, eine Bruchsteinwand, eine kleine Theke. Draußen komplett überdachte Terrasse.",
@@ -69,14 +73,18 @@ const I18N = {
     "footer.contact":"Kontakt"
   },
   en: {
-    "nav.menu":"Recommendations","nav.cakes":"Cakes","nav.story":"About","nav.visit":"Visit",
+    "nav.menu":"Recommendations","nav.cakes":"Cakes","nav.gallery":"Impressions","nav.story":"About","nav.visit":"Visit",
     "cta.reserve":"Book",
     "hero.eyebrow":"Cala Millor · Mallorca",
     "hero.title":"Freshly cooked. With lots of love.",
     "hero.sub":"German cooking in a small side street of Cala Millor — cozy, honest, freshly prepared every evening.",
     "hero.reserve":"Book a table",
-    "hero.hours":"Wed – Sun · from 17:30 · Sun also lunch",
+    "hero.hoursMain":"Wed – Sat · 17:30 – 22:30",
+    "hero.hoursSunday":"Sun · 12:00 – 14:30 · 17:30 – 22:30",
     "hero.rating":"★ 4.9 on Google · 433 reviews",
+    "gallery.kicker":"Impressions",
+    "gallery.title":"What it looks like inside.",
+    "gallery.note":"Sample photos — happy to swap for real photos of your dishes on request.",
     "story.kicker":"About",
     "story.title":"Small, cozy, honest cooking.",
     "story.p1":"YOLO is tucked away in a small side street heading to the seafront. Inside: rustic white tables, a natural-stone wall, a small bar. Outside: a fully covered terrace.",
@@ -108,14 +116,18 @@ const I18N = {
     "footer.contact":"Contact"
   },
   es: {
-    "nav.menu":"Recomendaciones","nav.cakes":"Tartas","nav.story":"Sobre nosotros","nav.visit":"Visita",
+    "nav.menu":"Recomendaciones","nav.cakes":"Tartas","nav.gallery":"Imágenes","nav.story":"Sobre nosotros","nav.visit":"Visita",
     "cta.reserve":"Reservar",
     "hero.eyebrow":"Cala Millor · Mallorca",
     "hero.title":"Cocinado al momento. Con mucho cariño.",
     "hero.sub":"Cocina alemana en una pequeña calle de Cala Millor — acogedor, honesto, recién preparado cada tarde.",
     "hero.reserve":"Reservar mesa",
-    "hero.hours":"Mié – Dom · desde 17:30 · Dom también mediodía",
+    "hero.hoursMain":"Mié – Sáb · 17:30 – 22:30",
+    "hero.hoursSunday":"Dom · 12:00 – 14:30 · 17:30 – 22:30",
     "hero.rating":"★ 4,9 en Google · 433 reseñas",
+    "gallery.kicker":"Imágenes",
+    "gallery.title":"Así somos por dentro.",
+    "gallery.note":"Imágenes de muestra — las cambiamos por fotos reales de vuestros platos a petición.",
     "story.kicker":"Sobre nosotros",
     "story.title":"Pequeño, acogedor, cocinado de verdad.",
     "story.p1":"YOLO está en una callejuela tranquila hacia el paseo marítimo. Dentro: mesas blancas rústicas, una pared de piedra natural, una pequeña barra. Fuera: terraza completamente cubierta.",
@@ -204,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
   nav.innerHTML = `
     <a href="#empfehlungen" data-i18n="nav.menu">Empfehlungen</a>
     <a href="#kuchen" data-i18n="nav.cakes">Kuchen</a>
+    <a href="#eindruecke" data-i18n="nav.gallery">Eindrücke</a>
     <a href="#historia" data-i18n="nav.story">Über uns</a>
     <a href="#visitanos" data-i18n="nav.visit">Besuch</a>
     <a href="tel:+34643820006" class="btn btn-primary" data-i18n="cta.reserve">Reservieren</a>
